@@ -4,6 +4,7 @@ from torch_geometric.data import Dataset
 from tqdm import tqdm
 from sklearn.metrics import roc_auc_score
 import json
+import argparse
 
 class ABIDE(Dataset):
     def __init__(self):
@@ -63,9 +64,18 @@ class Trainer:
 
 
 if __name__ == "__main__":
-    device = "Your device"
-    data_root = "Your root"
-    config = json.load(open("./config/abide.json"))
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-c', '--config', default='config/config.json', type=str)
+    parser.add_argument('-d', '--dataset', default='abide', type=str)
+    parser.add_argument('--device', default='cuda', type=str)
+    parser.add_argument('-s', '--save_result', action='store_true')
+
+    args = parser.parse_args()
+
+
+    config = json.load(open(args.c))[args.dataset]
+    device = config['device']
+    data_root = config['data_root']
     batch_size = config["batch_size"]
     set_seed(config["seed"])
     loss_func = torch.nn.CrossEntropyLoss(reduction=config["reduction"])
