@@ -1,4 +1,4 @@
-# BrainNetMLP
+<h1 align="center">BrainNetMLP</h1>
 <a href="https://arxiv.org/pdf/2505.11538"><img src="https://img.shields.io/badge/Paper-arXiv-b31b1b.svg"></a>
 
 In this project, we build an efficient yet effective functional brain network classifier, 
