@@ -1,7 +1,15 @@
 <h1 align="center">BrainNetMLP</h1>
-<a href="https://arxiv.org/pdf/2505.11538"><img src="https://img.shields.io/badge/Paper-arXiv-b31b1b.svg"></a>
 
-In this project, we build an efficient yet effective functional brain network classifier, 
+
+<p align="center">
+  <a href="https://arxiv.org/pdf/2505.11538"><img src="https://img.shields.io/badge/Paper-arXiv-b31b1b.svg"></a>
+  &nbsp;
+  <a href="https://github.com/JayceonHo/BrainNetMLP"><img src="https://img.shields.io/badge/Website-ProjectPage-A55D35"></a>
+  &nbsp;
+  <a href="https://www.nitrc.org/"><img src="https://img.shields.io/badge/Resource-Dataset-EFBF6A.svg"></a>
+</p>
+
+In this project, we build an efficient yet effective pure MLP-based functional brain network classifier, 
 which achieves comparative classification performance for ASD and gender classification.
 
 ![teaser](./fig/compare.png)
@@ -19,7 +27,7 @@ Here, we provide the guideline for running the training and evaluation code on A
 
 1. Prepare the data and save it at path: *full_data*.
 2. The format of dataset is *.npy* by default (or you can download ABIDE dataset [here](https://drive.google.com/file/d/14UGsikYH_SQ-d_GvY2Um2oEHw3WNxDY3/view?usp=sharing)).
-3. Run the following code for training and evaluation.
+3. Run the following command for training and evaluation.
 ```bash
 python train.py -d abide
 ```
@@ -30,7 +38,7 @@ Thanks for the work of [BrainNetTF](https://github.com/Wayfear/BrainNetworkTrans
 
 ## Citation
 
-If you find this project is useful, please star the repository and cite our paper:
+If you find this project is helpful, please star the repository and cite our paper:
 
 ```bibtex
 @article{hou2025brainnetmlp,
