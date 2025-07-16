@@ -9,6 +9,10 @@
   <a href="https://www.nitrc.org/"><img src="https://img.shields.io/badge/Resource-Dataset-EFBF6A.svg"></a>
 </p>
 
+---
+
+📢 **BrainNetMLP** is accepted by the 1st MICCAI Workshop on Efficient Medical AI.
+
 In this project, we build an efficient yet effective pure MLP-based functional brain network classifier, 
 which achieves comparative classification performance for ASD and gender classification.
 
