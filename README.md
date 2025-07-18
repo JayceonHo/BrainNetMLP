@@ -13,8 +13,8 @@
 
 📢 **BrainNetMLP** is accepted by the 1st MICCAI Workshop on Efficient Medical AI.
 
-In this project, we build an efficient yet effective pure MLP-based functional brain network classifier, 
-which achieves comparative classification performance for ASD and gender classification.
+In this project, we build a **very simple** yet efficient and effective pure MLP-based model for functional brain network classification, 
+which achieves comparative performance for Autism Spectral Disorder (ASD) and gender classification.
 
 ![teaser](./fig/compare.png)
 
@@ -22,7 +22,7 @@ which achieves comparative classification performance for ASD and gender classif
 
 <img src="./fig/pipeline.jpg" width="800" height="500" float: center>
 
-BrainNetMLP incorporates a dual-branch structure to jointly capture both spatial connectivity and spectral information, 
+The main nolvety of BrainNetMLP is that it incorporates a dual-branch structure to jointly capture both spatial connectivity and spectral information, 
 enabling precise spatiotemporal feature fusion.  
 
 
