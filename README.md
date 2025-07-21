@@ -11,7 +11,7 @@
 
 ---
 
-📢 **BrainNetMLP** is accepted by the 1st MICCAI Workshop on Efficient Medical AI.
+📢 **BrainNetMLP** is accepted for *oral presentation* at the 1st MICCAI Workshop on Efficient Medical AI.
 
 In this project, we build a **very simple** yet efficient and effective pure MLP-based model for functional brain network classification, 
 which achieves comparative performance for Autism Spectral Disorder (ASD) and gender classification.
