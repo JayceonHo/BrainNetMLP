@@ -20,7 +20,7 @@ which achieves comparative performance for Autism Spectral Disorder (ASD) and ge
 
 ## Pipeline
 
-<img src="./fig/pipeline.jpg" width="800" height="500" float: center>
+<img src="./fig/pipeline.png" width="800" height="500" float: center>
 
 The main nolvety of BrainNetMLP is that it incorporates a dual-branch structure to jointly capture both spatial connectivity and spectral information, 
 enabling precise spatiotemporal feature fusion.  
