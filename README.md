@@ -25,7 +25,25 @@ which achieves comparative performance for Autism Spectral Disorder (ASD) and ge
 The main nolvety of BrainNetMLP is that it incorporates a dual-branch structure to jointly capture both spatial connectivity and spectral information, 
 enabling precise spatiotemporal feature fusion.  
 
+## Quik Start
 
+```
+"""
+BrainNetMLP: An efficient and effective baseline
+
+Args:
+    X: the brain connectivity matrix (NxN)
+    T: the processed BOLD signal (NxT)
+    k: the number of low-frequency components to keep
+"""
+def BrainNetMLP(X, T, k):
+  F = torch.fft.rfft(T)
+  F = torch.abs(F)[:, 1:k] # apply low-pass filter
+  X = uptriu(X).flatten() # get valid values 
+  X, F = MLP_1(X), MLP_2(F) 
+  y = MLP_3([X,F]) # make prediction based on spectral and spatial features
+  return y
+```
 ## Usage
 Here, we provide the guideline for running the training and evaluation code on ABIDE dataset:
 
