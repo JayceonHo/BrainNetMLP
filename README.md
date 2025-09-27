@@ -10,8 +10,9 @@
 </p>
 
 ---
+:trophy: We are excited to announce **BrainNetMLP** is honored with the -**Best Paper Award**- at the 1st EMA4MICCAI workshop.
 
-📢 **BrainNetMLP** is accepted for *oral presentation* at the 1st MICCAI Workshop on Efficient Medical AI.
+:loudspeaker: **BrainNetMLP** is accepted for *oral presentation* at the 1st MICCAI Workshop on Efficient Medical AI ([EMA4MICCAI](https://sites.google.com/view/ema4miccai2025/home)).
 
 In this project, we build a **very simple** yet efficient and effective pure MLP-based model for functional brain network classification, 
 which achieves comparative performance for Autism Spectral Disorder (ASD) and gender classification.
@@ -22,11 +23,9 @@ which achieves comparative performance for Autism Spectral Disorder (ASD) and ge
 
 <img src="./fig/pipeline.png" width="800" height="500" float: center>
 
-The main nolvety of BrainNetMLP is that it incorporates a dual-branch structure to jointly capture both spatial connectivity and spectral information, 
-enabling precise spatiotemporal feature fusion.  
+We hope our approach can act as a simple yet efficient and effective baseline for the task of functional brain network classification.
 
-## Quik Start
-
+## Pseudo Code
 ```
 """
 BrainNetMLP: An efficient and effective baseline
