@@ -10,7 +10,7 @@
 </p>
 
 ---
-:trophy: We are excited to announce **BrainNetMLP** is honored with the -**Best Paper Award**- at the 1st EMA4MICCAI workshop.
+:trophy: **BrainNetMLP** is honored with the -**Best Paper Award**- at the 1st EMA4MICCAI workshop.
 
 :loudspeaker: **BrainNetMLP** is accepted for *oral presentation* at the 1st MICCAI Workshop on Efficient Medical AI ([EMA4MICCAI](https://sites.google.com/view/ema4miccai2025/home)).
 
