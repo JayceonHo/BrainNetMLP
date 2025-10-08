@@ -4,7 +4,7 @@
     "batch_size": 64,
     "reduction": "sum",
     "device": "cuda",
-    "root": "./full_data/",
+    "data_root": "./full_data/",
     "index_path": "./full_data/",
     "num_epoch": 200,
     "num_repeat": 5,
@@ -13,7 +13,7 @@
     "hidden_dim": [32, 32],
     "dropout_rate": [0,0],
     "norm":0,
-    "k": 17,
+    "k": 40,
     "learning_rate": 1e-4
   }
 

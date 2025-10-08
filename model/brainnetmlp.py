@@ -27,7 +27,7 @@ class BrainNetMLP(nn.Module):
             nn.Dropout(drop_rate[1]),
         )
         self.k = k
-        if norm:
+        if norm==1:
             self.norm = nn.BatchNorm1d(hidden_dim[0] + hidden_dim[1])
         else:
             self.norm = nn.Identity()

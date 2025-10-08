@@ -1,8 +1,8 @@
 from model.brainnetmlp import BrainNetMLP
 from utilis import *
-from torch_geometric.data import Dataset
-from tqdm import tqdm
+from torch.utils.data import Dataset
 from sklearn.metrics import roc_auc_score
+from tqdm import tqdm
 import json
 import argparse
 
@@ -36,7 +36,7 @@ class Trainer:
             test_sensitivity_list.append(test_sens)
             test_specificity_list.append(test_spec)
         print(f"test acc: {test_accuracy_list}, test auroc: {test_auroc_list}, test sens: {test_sensitivity_list}, test spec: {test_specificity_list}")
-        torch.save(self.classifier.state_dict(), "./ckpt/full_mlp.pt")
+        # torch.save(self.classifier.state_dict(), "./ckpt/full_mlp.pt")
 
 
     def train(self):
@@ -59,7 +59,7 @@ class Trainer:
             pred = torch.argmax(pred, dim=1)
             test_correct = cal_accuracy(pred, test_label)
             test_au_roc = roc_auc_score(test_label.cpu().numpy(), prob[:, 1].cpu().numpy())
-            sensitivity, specificity = cal_specificity_sensitivity(pred, test_label)
+            sensitivity, specificity = cal_specificity_sensitivity(pred.cpu().numpy(), test_label.cpu().numpy())
         return test_correct,  test_au_roc, sensitivity, specificity
 
 
@@ -72,15 +72,15 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-
-    config = json.load(open(args.c))[args.dataset]
+    set_seed(2025)
+    config = json.load(open(args.config))[args.dataset]
     device = config['device']
     data_root = config['data_root']
     batch_size = config["batch_size"]
     set_seed(config["seed"])
     loss_func = torch.nn.CrossEntropyLoss(reduction=config["reduction"])
     time_series, feature_matrix, A, label = load_data(data_root, device=device)
-    train_index, test_index, validation_index = load_index(config["index_path"])
+    train_index, test_index = load_index(config["index_path"])
     train_feature_matrix, train_time_series = feature_matrix[train_index], time_series[train_index]
     test_feature_matrix, test_time_series = feature_matrix[test_index], time_series[test_index]
     train_label, test_label = label[train_index], label[test_index]
