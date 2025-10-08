@@ -17,11 +17,11 @@
 In this project, we build a **very simple** yet efficient and effective pure MLP-based model for functional brain network classification, 
 which achieves comparative performance for Autism Spectral Disorder (ASD) and gender classification.
 
-![teaser](./fig/compare.png)
+![teaser](./assets/compare.png)
 
 ## Pipeline
 
-<img src="./fig/pipeline.png" width="800" height="500" float: center>
+<img src="./assets/pipeline.png" width="800" height="500" float: center>
 
 We hope our approach can act as a simple yet efficient and effective baseline for the task of functional brain network classification.
 
