@@ -69,10 +69,7 @@ if __name__ == "__main__":
     parser.add_argument('-d', '--dataset', default='abide', type=str)
     parser.add_argument('--device', default='cuda', type=str)
     parser.add_argument('-s', '--save_result', action='store_true')
-
     args = parser.parse_args()
-
-    set_seed(2025)
     config = json.load(open(args.config))[args.dataset]
     device = config['device']
     data_root = config['data_root']
